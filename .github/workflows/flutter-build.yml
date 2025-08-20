@@ -1610,7 +1610,6 @@ jobs:
 
   build-rustdesk-linux-sciter:
     if: false
-    if: ${{ inputs.upload-artifact }}
     runs-on: ${{ matrix.job.on }}
     name: build-rustdesk-linux-sciter ${{ matrix.job.target }}
     strategy:
