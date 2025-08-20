@@ -163,6 +163,9 @@ jobs:
         shell: bash
 
       - name: Build rustdesk
+        env: # <--- 这是你需要新添加的部分
+          RENDEZVOUS_SERVER: ${{ secrets.RENDEZVOUS_SERVER }}
+          RS_PUB_KEY: ${{ secrets.RS_PUB_KEY }}
         run: |
           # Windows: build RustDesk
           python3 .\build.py --portable --hwcodec --flutter --vram --skip-portable-pack
