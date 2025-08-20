@@ -361,7 +361,7 @@ jobs:
       - name: Build rustdesk
         id: build
         shell: bash
-		env:
+        env:
           RENDEZVOUS_SERVER: ${{ secrets.RENDEZVOUS_SERVER }}
           RS_PUB_KEY: ${{ secrets.RS_PUB_KEY }}
         run: |
