@@ -15,5 +15,4 @@ jobs:
     secrets: inherit
     with:
       upload-artifact: true
-      upload-tag: ${{ github.event.inputs.tag_version }} 
-      target-platform: ${{ github.event.inputs.target_platform }}
+      upload-tag: ${{ github.ref_name }}
